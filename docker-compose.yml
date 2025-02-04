@@ -55,6 +55,7 @@ services:
       bash /volumes/check_config.sh &&
       ip route add 10.10.0.0/24 dev eth0 via 10.10.1.10 &&
       cp /volumes/vimrc /home/netsec/.vimrc &&
+      bash /volumes/fix_depends.sh &&
       tail -f /dev/null
       "
 
@@ -83,6 +84,7 @@ services:
       echo 'netsec ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers &&
       bash /volumes/check_config.sh &&
       cp /volumes/vimrc /home/netsec/.vimrc &&
+      bash /volumes/fix_depends.sh &&
       tail -f /dev/null
       "
 
